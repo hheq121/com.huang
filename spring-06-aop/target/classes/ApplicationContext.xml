@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+
+        <bean id="userService" class="com.rbc.UserServiceImpl"></bean>
+
+<!--    方式一：使用springAPI 接口定义 实现AOP-->
+
+<!--    <bean id="beforeLog" class="com.rbc.BeforeLog"></bean>-->
+<!--    <bean id="AfterLog" class="com.rbc.AfterLog"></bean>-->
+
+<!--    <aop:config>-->
+<!--        <aop:pointcut id="pc" expression="execution(* com.rbc.UserServiceImpl.*(..))"/>-->
+<!--        <aop:advisor advice-ref="beforeLog" pointcut-ref="pc"/>-->
+<!--        <aop:advisor advice-ref="AfterLog" pointcut-ref="pc"/>-->
+<!--    </aop:config>-->
+
+
+<!--    方式二：自定义切面实现AOP-->
+<!--    <bean id="diy" class="com.rbc.DiyPointCut"></bean>-->
+
+<!--    <aop:config>-->
+<!--        <aop:pointcut id="point" expression="execution(* com.rbc.UserServiceImpl.*(..))"></aop:pointcut>-->
+<!--        <aop:aspect  ref="diy">-->
+<!--            <aop:before method="before"  pointcut-ref="point" ></aop:before>-->
+<!--            <aop:after method="After" pointcut-ref="point"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+
+<!--        方式三：查询方法-->
+
+        <bean id="annotationPointCut" class="com.rbc.AnnotationPointCut"></bean>
+        <aop:aspectj-autoproxy/>
+
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huang.mapper.UserMapper">
+    <select id="SelectUser" resultType="User">
+        select * from  db_book.user ;
+    </select>
+
+    <insert id="AddUser" parameterType="User">
+        insert into db_book.user (userName,passWord,realName) values(#{userName},#{passWord},#{realName})
+    </insert>
+
+    <delete id="DeleteUser" parameterType="int">
+        delete from  db_book.user where id=#{id}
+    </delete>
+</mapper>

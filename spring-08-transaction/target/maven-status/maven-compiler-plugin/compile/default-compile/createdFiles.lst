@@ -1,0 +1,5 @@
+com\huang08\services\UserServicesImpl.class
+com\huang08\mapper\UserMapper.class
+com\huang08\controller\UserController.class
+com\huang08\services\UserServices.class
+com\huang08\pojo\User.class

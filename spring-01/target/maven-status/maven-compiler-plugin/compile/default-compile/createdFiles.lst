@@ -1,0 +1,7 @@
+com\rbc\MyTest.class
+com\rbc\MyuserDao.class
+com\rbc\MyUserService.class
+com\rbc\MyUserServiceImpl.class
+com\rbc\MyuserDaoImpl.class
+com\rbc\MyuserMysqlDaoImpl.class
+com\rbc\MyuserOralceDaoImpl.class
